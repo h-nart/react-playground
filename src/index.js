@@ -9,7 +9,8 @@ import LifeCyclesParent from "./LifeCycles";
 import {UncontrolledComponent, ControlledComponent} from "./UncontrolledComponent";
 import List from "./Lists";
 import {Conditionals, ClassNameTest, StyledComponent} from "./Styling";
-import {FormattedContent} from './HOCs'
+import {CsvLayout, CsvNovels, FormattedContent} from './HOCs'
+import {AuthorsFaaC, FaaC} from "./FaaC";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -31,6 +32,9 @@ root.render(
         <ClassNameTest/>
         <StyledComponent color="blue"/>
         <FormattedContent prop1="v1" prop2="v2"/>
+        <CsvNovels separator={" | "}/>
+        <FaaC/>
+        <AuthorsFaaC>{(data) => <CsvLayout data={data}/>}</AuthorsFaaC>
     </>
 );
 

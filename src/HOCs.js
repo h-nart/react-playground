@@ -29,27 +29,38 @@ const FormattedContent = withFormatting(({bold, italic, ...rest}) => {
     );
 });
 
-// class HigherOrderComponents extends React.Component {
-//
-// }
+/**
+ * A Higher Order Component takes a layout component as an argument, generates content for and passes it to the layout
+ * component, then returns a Component of the layout with the data.
+* */
+const withNovels = (WrappedComponent) => {
+    return class extends React.Component {
+        state = {
+            favorite: ["Crime and Punishment", "The Brothers Karamazov"],
+            input: "",
+        }
+        render() {
+            return (
+                <>
+                    <WrappedComponent data={this.state.favorite} {...this.props}/>
+                    <input onChange={(e) => this.setState({input: e.target.value})}/>
+                    <button onClick={() => {
+                        this.setState({
+                            favorite: [...this.state.favorite, this.state.input]
+                        })
+                    }}>Add
+                    </button>
+                </>
+            );
+        }
+    };
+};
 
-// const withCryptoPrices = (WrappedComponent) => {
-//     return class extends React.Component {
-//         state = {
-//             isLoading: true,
-//             items: [],
-//         }
-//
-//         componentDidMount() {
-//             this.loadData();
-//         }
-//
-//         loadData = async () => {
-//             this.setState({isLoading: true});
-//             await fetch('https://ed-4671286834102272.educative.run:3000/api/v3/coins/markets?vs_currency=eur&per_page=10');
-//         };
-//
-//     };
-// }
+const CsvLayout = ({data, ...rest}) => {
+    const {separator} = rest;
+    return <div>{data.map(d => d + (separator ? separator : ", "))}</div>
+}
 
-export {withFormatting, FormattedContent};
+const CsvNovels = withNovels(CsvLayout);
+
+export {withFormatting, FormattedContent, CsvNovels, CsvLayout};
