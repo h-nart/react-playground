@@ -92,6 +92,18 @@ const LanguageSelector = () => (
     </TranslationsContext.Consumer>
 )
 
+// contextType
+class TranslatedComponent extends React.Component {
+    static contextType = TranslationsContext;
+    render() {
+        return (
+            <p>{this.context.translations[this.props.translationKey]}</p>
+        );
+    }
+}
+
+// TranslatedComponent.contextType = TranslationsContext;
+
 const LanguageApp = () => (
     <Localized>
         <LanguageSelector/>
@@ -106,6 +118,7 @@ const LanguageApp = () => (
         <p>
             <Translated translationKey="greeting"/>
         </p>
+        <TranslatedComponent translationKey="greeting"/>
     </Localized>
 )
 
