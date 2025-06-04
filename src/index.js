@@ -12,6 +12,7 @@ import {Conditionals, ClassNameTest, StyledComponent} from "./Styling";
 import {CsvLayout, CsvNovels, FormattedContent} from './HOCs'
 import {AuthorsFaaC, FaaC} from "./FaaC";
 import {ContextApiApp, LanguageApp} from "./ContextApi";
+import {CallbackRef, CreateRef} from "./Refs";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -38,6 +39,8 @@ root.render(
         <AuthorsFaaC>{(data) => <CsvLayout data={data}/>}</AuthorsFaaC>
         <ContextApiApp/>
         <LanguageApp/>
+        <CallbackRef/>
+        <CreateRef/>
     </>
 );
 
