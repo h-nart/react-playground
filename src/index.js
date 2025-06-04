@@ -12,7 +12,7 @@ import {Conditionals, ClassNameTest, StyledComponent} from "./Styling";
 import {CsvLayout, CsvNovels, FormattedContent} from './HOCs'
 import {AuthorsFaaC, FaaC} from "./FaaC";
 import {ContextApiApp, LanguageApp} from "./ContextApi";
-import {CallbackRef, CreateRef} from "./Refs";
+import {CallbackRef, CreateRef, ForwardRef} from "./Refs";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -41,6 +41,7 @@ root.render(
         <LanguageApp/>
         <CallbackRef/>
         <CreateRef/>
+        <ForwardRef/>
     </>
 );
 

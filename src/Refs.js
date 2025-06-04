@@ -38,4 +38,41 @@ class CreateRef extends React.Component {
     }
 }
 
-export {CallbackRef, CreateRef};
+const UsernameField = React.forwardRef((props, ref) => (
+   <div>
+       <input ref={ref} {...props}/>
+   </div>
+));
+
+class UsernameFieldClassComponent extends React.Component {
+    render() {
+        return (
+            <div>
+                <input ref={this.props.ref} {...this.props}/>
+            </div>
+        )
+    }
+}
+
+// forwardRef
+class ForwardRef extends React.Component {
+    usernameEl = React.createRef();
+    usernameClassComponent = React.createRef();
+
+    componentDidMount() {
+        // notice how ForwardRef now has access to UsernameField because of forwardRef
+        console.log(this.usernameEl)
+        console.log(this.usernameClassComponent)
+    }
+
+    render() {
+        return (
+            <div>
+                <UsernameField ref={this.usernameEl}/>
+                <UsernameFieldClassComponent ref={this.usernameClassComponent}/>
+            </div>
+        );
+    }
+}
+
+export {CallbackRef, CreateRef, ForwardRef};
