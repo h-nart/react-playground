@@ -13,6 +13,7 @@ import {CsvLayout, CsvNovels, FormattedContent} from './HOCs'
 import {AuthorsFaaC, FaaC} from "./FaaC";
 import {ContextApiApp, LanguageApp} from "./ContextApi";
 import {CallbackRef, CreateRef, ForwardRef} from "./Refs";
+import ErroneousApp from "./ErrorBoundaries";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -42,6 +43,7 @@ root.render(
         <CallbackRef/>
         <CreateRef/>
         <ForwardRef/>
+        <ErroneousApp/>
     </>
 );
 
