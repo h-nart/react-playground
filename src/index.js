@@ -14,6 +14,8 @@ import {AuthorsFaaC, FaaC} from "./FaaC";
 import {ContextApiApp, LanguageApp} from "./ContextApi";
 import {CallbackRef, CreateRef, ForwardRef} from "./Refs";
 import ErroneousApp from "./ErrorBoundaries";
+import {GifPortalApp, PortalContainer, ModalPortalApp} from "./Portals";
+import portal from "./portal.gif";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -21,6 +23,8 @@ root.render(
     <>
         <React.StrictMode>
             <App>
+                <PortalContainer/>
+                <GifPortalApp gifPath={portal}/>
                 <ComponentsTypes/>
                 <StatefulApp counter={0}/>
                 {/*Strict mode will mount => unmount => remount components for testing. This only affects development environments.*/}
@@ -44,6 +48,7 @@ root.render(
         <CreateRef/>
         <ForwardRef/>
         <ErroneousApp/>
+        <ModalPortalApp/>
     </>
 );
 
