@@ -17,6 +17,7 @@ import ErroneousApp from "./ErrorBoundaries";
 import {GifPortalApp, PortalContainer, ModalPortalApp} from "./Portals";
 import portal from "./portal.gif";
 import DynamicImportsApp from "./DynamicImports";
+import {User, Greeting} from "./PropTypes";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -51,6 +52,10 @@ root.render(
         <ErroneousApp/>
         <ModalPortalApp/>
         <DynamicImportsApp/>
+        <User name="Nart" creationDate="test" age={"testt"}/>
+        <User creationDate="test" age={"testt"}/>
+        <Greeting greeting="Hello!"/>
+        <Greeting/>
     </>
 );
 
