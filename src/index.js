@@ -16,6 +16,7 @@ import {CallbackRef, CreateRef, ForwardRef} from "./Refs";
 import ErroneousApp from "./ErrorBoundaries";
 import {GifPortalApp, PortalContainer, ModalPortalApp} from "./Portals";
 import portal from "./portal.gif";
+import DynamicImportsApp from "./DynamicImports";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -49,6 +50,7 @@ root.render(
         <ForwardRef/>
         <ErroneousApp/>
         <ModalPortalApp/>
+        <DynamicImportsApp/>
     </>
 );
 
