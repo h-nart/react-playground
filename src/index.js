@@ -18,6 +18,7 @@ import {GifPortalApp, PortalContainer, ModalPortalApp} from "./Portals";
 import portal from "./portal.gif";
 import DynamicImportsApp from "./DynamicImports";
 import {User, Greeting} from "./PropTypes";
+import {ContextHookApp, CounterApp, CounterWithHook} from "./Hooks";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -56,6 +57,9 @@ root.render(
         <User creationDate="test" age={"testt"}/>
         <Greeting greeting="Hello!"/>
         <Greeting/>
+        <CounterWithHook/>
+        <CounterApp/>
+        <ContextHookApp/>
     </>
 );
 
