@@ -146,4 +146,26 @@ const GitHubDataApp = ({username}) => {
     );
 };
 
-export {CounterWithHook, CounterApp, ContextHookApp, UseBackgroundApp, GitHubDataApp};
+const UpdateData = () => {
+    const [data, setData] = useState({
+        name: "Nart",
+        country: "Jordan",
+    });
+
+    return (
+        <>
+            <button onClick={() =>
+                setData(prevState => ({
+                    ...prevState,
+                    country: "Australia",
+                }))}>
+                Update Data
+            </button>
+            <p>
+                {JSON.stringify(data)}
+            </p>
+        </>
+    )
+}
+
+export {CounterWithHook, CounterApp, ContextHookApp, UseBackgroundApp, GitHubDataApp, UpdateData};
