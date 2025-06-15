@@ -18,7 +18,7 @@ import {GifPortalApp, PortalContainer, ModalPortalApp} from "./Portals";
 import portal from "./portal.gif";
 import DynamicImportsApp from "./DynamicImports";
 import {User, Greeting} from "./PropTypes";
-import {ContextHookApp, CounterApp, CounterWithHook} from "./Hooks";
+import {ContextHookApp, CounterApp, CounterWithHook, GitHubDataApp, UseBackgroundApp} from "./Hooks";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -60,6 +60,10 @@ root.render(
         <CounterWithHook/>
         <CounterApp/>
         <ContextHookApp/>
+        <UseBackgroundApp/>
+        <GitHubDataApp username="h-nart"/>
+        {/*<GitHubDataApp username="dkastani"/>*/}
+        {/*<GitHubDataApp username="sjalowdi"/>*/}
     </>
 );
 
