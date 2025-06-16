@@ -165,7 +165,7 @@ const UpdateData = () => {
                 {JSON.stringify(data)}
             </p>
         </>
-    )
+    );
 }
 
 export {CounterWithHook, CounterApp, ContextHookApp, UseBackgroundApp, GitHubDataApp, UpdateData};
