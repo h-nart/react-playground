@@ -11,9 +11,9 @@ const initState = {
 
 const reducerFunc = (state, action) => {
     switch (action.type) {
-        case '+':
+        case 'INCREMENT':
             return {count: state.count + 1};
-        case '-':
+        case 'DECREMENT':
             return {count: state.count - 1};
     }
 }
@@ -28,13 +28,13 @@ const ReducerCounter = (props) => {
         <>
             <div>
                 <h3>{state.count}</h3>
-                <button onClick={() => dispatch({type: '+'})}>+</button>
-                <button onClick={() => dispatch({type: '-'})}>-</button>
+                <button onClick={() => dispatch({type: 'INCREMENT'})}>+</button>
+                <button onClick={() => dispatch({type: 'DECREMENT'})}>-</button>
             </div>
             <div>
                 <h3>{state2.count}</h3>
-                <button onClick={() => dispatch2({type: '+'})}>+</button>
-                <button onClick={() => dispatch2({type: '-'})}>-</button>
+                <button onClick={() => dispatch2({type: 'INCREMENT'})}>+</button>
+                <button onClick={() => dispatch2({type: 'DECREMENT'})}>-</button>
             </div>
         </>
     );
