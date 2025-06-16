@@ -19,7 +19,7 @@ import portal from "./portal.gif";
 import DynamicImportsApp from "./DynamicImports";
 import {User, Greeting} from "./PropTypes";
 import {ContextHookApp, CounterApp, CounterWithHook, GitHubDataApp, UpdateData, UseBackgroundApp} from "./Hooks";
-import {ReducerCounter} from "./HooksApi";
+import {ApiCall, ReducerCounter} from "./Reducer";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -67,6 +67,7 @@ root.render(
         {/*<GitHubDataApp username="sjalowdi"/>*/}
         <UpdateData/>
         <ReducerCounter value={5}/>
+        <ApiCall name="Nart"/>
     </>
 );
 
