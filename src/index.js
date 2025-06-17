@@ -21,6 +21,7 @@ import {User, Greeting} from "./PropTypes";
 import {ContextHookApp, CounterApp, CounterWithHook, GitHubDataApp, UpdateData, UseBackgroundApp} from "./hooks/Hooks";
 import {ApiCall, ReducerCounter} from "./hooks/Reducer";
 import {CallbackApp} from "./hooks/Callback";
+import UseMemoApp from "./hooks/Memo";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -70,6 +71,7 @@ root.render(
         <ReducerCounter value={5}/>
         <ApiCall name="Nart"/>
         <CallbackApp/>
+        <UseMemoApp/>
     </>
 );
 
