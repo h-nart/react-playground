@@ -18,8 +18,9 @@ import {GifPortalApp, PortalContainer, ModalPortalApp} from "./Portals";
 import portal from "./portal.gif";
 import DynamicImportsApp from "./DynamicImports";
 import {User, Greeting} from "./PropTypes";
-import {ContextHookApp, CounterApp, CounterWithHook, GitHubDataApp, UpdateData, UseBackgroundApp} from "./Hooks";
-import {ApiCall, ReducerCounter} from "./Reducer";
+import {ContextHookApp, CounterApp, CounterWithHook, GitHubDataApp, UpdateData, UseBackgroundApp} from "./hooks/Hooks";
+import {ApiCall, ReducerCounter} from "./hooks/Reducer";
+import {CallbackApp} from "./hooks/Callback";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -68,6 +69,7 @@ root.render(
         <UpdateData/>
         <ReducerCounter value={5}/>
         <ApiCall name="Nart"/>
+        <CallbackApp/>
     </>
 );
 

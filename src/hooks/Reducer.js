@@ -16,7 +16,7 @@ const reducerFunc = (state, action) => {
         case 'DECREMENT':
             return {count: state.count - 1};
     }
-}
+};
 
 const initFunc = (value) => ({count: value});
 
@@ -38,7 +38,7 @@ const ReducerCounter = (props) => {
             </div>
         </>
     );
-}
+};
 
 
 /** API usage and useReducer**/
@@ -48,7 +48,7 @@ const initialState = {
     isLoading: false,
     isError: false,
     lastUpdated: null,
-}
+};
 
 const ApiReducer = (state, action) => {
     switch (action.type) {
@@ -74,7 +74,7 @@ const ApiReducer = (state, action) => {
         default:
             throw new Error('Unknown Action')
     }
-}
+};
 
 const ApiCall = ({name}) => {
     const [state, dispatch] = useReducer(ApiReducer, initialState);
@@ -116,6 +116,6 @@ const ApiCall = ({name}) => {
     }
 
     return <p>Data: {JSON.stringify(state.data)}</p>
-}
+};
 
 export {ReducerCounter, ApiCall};

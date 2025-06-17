@@ -24,7 +24,7 @@ const CounterWithHook = () => {
         <button onClick={() => value++}>+ 1</button> */}
         </>
     );
-}
+};
 
 const CounterApp = () => {
     const [show, setShow] = useState(true);
@@ -40,7 +40,7 @@ const CounterApp = () => {
             <button onClick={() => setShow(!show)}>{show ? 'Unmount' : 'Mount'}</button>
         </>
     );
-}
+};
 
 /** useContext **/
 const LanguageContext = React.createContext('en');
@@ -64,7 +64,7 @@ const ContextHookApp = () => {
             </LanguageContext.Provider>
         </>
     );
-}
+};
 
 /** Custom Hooks **/
 const useBackground = (background) => {
@@ -75,7 +75,7 @@ const useBackground = (background) => {
             root.style.background = '';
         }
     }, [background]);
-}
+};
 
 const UseBackgroundApp = () => {
     const [color, setColor] = useState('');
@@ -91,7 +91,7 @@ const UseBackgroundApp = () => {
             </select>
         </div>
     );
-}
+};
 
 // const useGitHubAccountData = (username) => {
 //     const [data, setData] = useState({});
@@ -121,7 +121,7 @@ const mockupData = {
         created_at: "2020-04-22T10:08:02Z",
         updated_at: "2025-06-11T19:39:35Z",
     },
-}
+};
 
 const useGitHubAccountDataMockup = (username) => {
     const [data, setData] = useState({});
@@ -166,6 +166,6 @@ const UpdateData = () => {
             </p>
         </>
     );
-}
+};
 
 export {CounterWithHook, CounterApp, ContextHookApp, UseBackgroundApp, GitHubDataApp, UpdateData};

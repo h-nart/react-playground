@@ -60,7 +60,7 @@ class ForwardRef extends React.Component {
     usernameClassComponent = React.createRef();
 
     componentDidMount() {
-        // notice how ForwardRef now has access to UsernameField because of forwardRef
+        // notice how ForwardRef now has access to UsernameField's <input/> because of forwardRef
         console.log(this.usernameEl)
         console.log(this.usernameClassComponent)
     }
