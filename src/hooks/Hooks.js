@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useDebugValue, useEffect, useState} from "react";
 // import {Octokit} from "octokit";
 
 
@@ -68,6 +68,10 @@ const ContextHookApp = () => {
 
 /** Custom Hooks **/
 const useBackground = (background) => {
+    // useDebugValue(`debugging: ${background}`);
+    // use the formatting function for better performance, as it's only executed one the developer opens React Dev Tools
+    useDebugValue(`debugging: ${background}`, v => v);
+
     useEffect(() => {
         const root = document.getElementById('root');
         root.style.background = background;
